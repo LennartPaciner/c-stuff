@@ -4,9 +4,7 @@
 #include <sys/stat.h>
 #include <unistd.h>
 
-//TEST
-/*tttttttt
-*/
+
 //Um Konsole für Codelite File zu öffnen und Programm zu benutzen:
 //Rechtsklick auf das Projekt, dann open Shell.
 //gcc -c FileCopy.c -> gcc FileCopy.o -o FileCopy -> ./FileCopy '*.txt' '*.txt'
