@@ -40,7 +40,7 @@ int main(int argc, const char* argv[]){
         int ergebnis = (filesize - durchlauf) / b;
         lseek(file1, 0, SEEK_SET);
 
-        //funktioniert nicht ganz(schreibt einen Schritt zu viel), aber bekomme es nicht besser hin
+        //
         while (ergebnis > 0){
             read(file1, buff, b);
             write(file2, buff, b);
