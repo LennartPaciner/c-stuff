@@ -22,8 +22,8 @@ int main(int argc, const char* argv[]){
         char buff[255];
         //Lege neues File an, um Daten zu kopieren und reinzuschreiben.
         int file2 = open(argv[2], O_CREAT | O_WRONLY, S_IRUSR | S_IWUSR);
-        
-        //Kopiere file1 in file2.
+        //Hänge Text auf file1 ans Ende von File2 an
+        lseek(file2, 0, SEEK_END);
         while ((read(file1, buff, 1)) > 0){
                 write(file2, buff, 1);
         }

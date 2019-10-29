@@ -95,7 +95,8 @@
   <VirtualDirectory Name="src">
     <File Name="main.c"/>
     <VirtualDirectory Name="FileCopy">
-      <File Name="FileCopy.c"/>
+      <File Name="src/FileCopy/FileCopy.c"/>
+      <File Name="src/FileCopy/FileCopyAppend.c"/>
     </VirtualDirectory>
     <VirtualDirectory Name="FileCopyReverse">
       <File Name="src/FileCopyReverse/FileCopyR.c"/>
