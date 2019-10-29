@@ -100,5 +100,11 @@
     <VirtualDirectory Name="FileCopyReverse">
       <File Name="src/FileCopyReverse/FileCopyR.c"/>
     </VirtualDirectory>
+    <VirtualDirectory Name="FileCopyWithBytes">
+      <File Name="src/FileCopyWithBytes/FileCopyWithBytes.c"/>
+    </VirtualDirectory>
+    <VirtualDirectory Name="FileLengthConsole">
+      <File Name="src/FileLengthConsole/FileLengthConsole.c"/>
+    </VirtualDirectory>
   </VirtualDirectory>
 </CodeLite_Project>
