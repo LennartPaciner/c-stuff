@@ -13,7 +13,7 @@ CurrentFileName        :=
 CurrentFilePath        :=
 CurrentFileFullPath    :=
 User                   :=lennart
-Date                   :=29/10/19
+Date                   :=05/11/19
 CodeLitePath           :=/home/lennart/.codelite
 LinkerName             :=/usr/bin/g++
 SharedObjectLinkerName :=/usr/bin/g++ -shared -fPIC
@@ -60,7 +60,7 @@ AS       := /usr/bin/as
 ## User defined environment variables
 ##
 CodeLiteDir:=/usr/share/codelite
-Objects0=$(IntermediateDirectory)/main.c$(ObjectSuffix) $(IntermediateDirectory)/FileCopy.c$(ObjectSuffix) $(IntermediateDirectory)/src_FileCopy_FileAppend.c$(ObjectSuffix) $(IntermediateDirectory)/src_FileCopyReverse_FileCopyR.c$(ObjectSuffix) $(IntermediateDirectory)/src_FileCopyWithBytes_FileCopyWithBytes.c$(ObjectSuffix) $(IntermediateDirectory)/src_FileLengthConsole_FileLengthConsole.c$(ObjectSuffix) 
+Objects0=$(IntermediateDirectory)/main.c$(ObjectSuffix) $(IntermediateDirectory)/src_FileCopy_FileCopy.c$(ObjectSuffix) $(IntermediateDirectory)/src_FileCopy_FileCopyAppend.c$(ObjectSuffix) $(IntermediateDirectory)/src_FileCopyReverse_FileCopyR.c$(ObjectSuffix) $(IntermediateDirectory)/src_FileCopyWithBytes_FileCopyWithBytes.c$(ObjectSuffix) $(IntermediateDirectory)/src_FileLengthConsole_FileLengthConsole.c$(ObjectSuffix) 
 
 
 
@@ -99,21 +99,21 @@ $(IntermediateDirectory)/main.c$(DependSuffix): main.c
 $(IntermediateDirectory)/main.c$(PreprocessSuffix): main.c
 	$(CC) $(CFLAGS) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/main.c$(PreprocessSuffix) main.c
 
-$(IntermediateDirectory)/FileCopy.c$(ObjectSuffix): FileCopy.c $(IntermediateDirectory)/FileCopy.c$(DependSuffix)
-	$(CC) $(SourceSwitch) "/home/lennart/Documents/github/c-stuff/File-Stuff/FileCopy.c" $(CFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/FileCopy.c$(ObjectSuffix) $(IncludePath)
-$(IntermediateDirectory)/FileCopy.c$(DependSuffix): FileCopy.c
-	@$(CC) $(CFLAGS) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/FileCopy.c$(ObjectSuffix) -MF$(IntermediateDirectory)/FileCopy.c$(DependSuffix) -MM FileCopy.c
+$(IntermediateDirectory)/src_FileCopy_FileCopy.c$(ObjectSuffix): src/FileCopy/FileCopy.c $(IntermediateDirectory)/src_FileCopy_FileCopy.c$(DependSuffix)
+	$(CC) $(SourceSwitch) "/home/lennart/Documents/github/c-stuff/File-Stuff/src/FileCopy/FileCopy.c" $(CFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/src_FileCopy_FileCopy.c$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/src_FileCopy_FileCopy.c$(DependSuffix): src/FileCopy/FileCopy.c
+	@$(CC) $(CFLAGS) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/src_FileCopy_FileCopy.c$(ObjectSuffix) -MF$(IntermediateDirectory)/src_FileCopy_FileCopy.c$(DependSuffix) -MM src/FileCopy/FileCopy.c
 
-$(IntermediateDirectory)/FileCopy.c$(PreprocessSuffix): FileCopy.c
-	$(CC) $(CFLAGS) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/FileCopy.c$(PreprocessSuffix) FileCopy.c
+$(IntermediateDirectory)/src_FileCopy_FileCopy.c$(PreprocessSuffix): src/FileCopy/FileCopy.c
+	$(CC) $(CFLAGS) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/src_FileCopy_FileCopy.c$(PreprocessSuffix) src/FileCopy/FileCopy.c
 
-$(IntermediateDirectory)/src_FileCopy_FileAppend.c$(ObjectSuffix): src/FileCopy/FileAppend.c $(IntermediateDirectory)/src_FileCopy_FileAppend.c$(DependSuffix)
-	$(CC) $(SourceSwitch) "/home/lennart/Documents/github/c-stuff/File-Stuff/src/FileCopy/FileAppend.c" $(CFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/src_FileCopy_FileAppend.c$(ObjectSuffix) $(IncludePath)
-$(IntermediateDirectory)/src_FileCopy_FileAppend.c$(DependSuffix): src/FileCopy/FileAppend.c
-	@$(CC) $(CFLAGS) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/src_FileCopy_FileAppend.c$(ObjectSuffix) -MF$(IntermediateDirectory)/src_FileCopy_FileAppend.c$(DependSuffix) -MM src/FileCopy/FileAppend.c
+$(IntermediateDirectory)/src_FileCopy_FileCopyAppend.c$(ObjectSuffix): src/FileCopy/FileCopyAppend.c $(IntermediateDirectory)/src_FileCopy_FileCopyAppend.c$(DependSuffix)
+	$(CC) $(SourceSwitch) "/home/lennart/Documents/github/c-stuff/File-Stuff/src/FileCopy/FileCopyAppend.c" $(CFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/src_FileCopy_FileCopyAppend.c$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/src_FileCopy_FileCopyAppend.c$(DependSuffix): src/FileCopy/FileCopyAppend.c
+	@$(CC) $(CFLAGS) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/src_FileCopy_FileCopyAppend.c$(ObjectSuffix) -MF$(IntermediateDirectory)/src_FileCopy_FileCopyAppend.c$(DependSuffix) -MM src/FileCopy/FileCopyAppend.c
 
-$(IntermediateDirectory)/src_FileCopy_FileAppend.c$(PreprocessSuffix): src/FileCopy/FileAppend.c
-	$(CC) $(CFLAGS) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/src_FileCopy_FileAppend.c$(PreprocessSuffix) src/FileCopy/FileAppend.c
+$(IntermediateDirectory)/src_FileCopy_FileCopyAppend.c$(PreprocessSuffix): src/FileCopy/FileCopyAppend.c
+	$(CC) $(CFLAGS) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/src_FileCopy_FileCopyAppend.c$(PreprocessSuffix) src/FileCopy/FileCopyAppend.c
 
 $(IntermediateDirectory)/src_FileCopyReverse_FileCopyR.c$(ObjectSuffix): src/FileCopyReverse/FileCopyR.c $(IntermediateDirectory)/src_FileCopyReverse_FileCopyR.c$(DependSuffix)
 	$(CC) $(SourceSwitch) "/home/lennart/Documents/github/c-stuff/File-Stuff/src/FileCopyReverse/FileCopyR.c" $(CFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/src_FileCopyReverse_FileCopyR.c$(ObjectSuffix) $(IncludePath)
