@@ -60,7 +60,7 @@ AS       := /usr/bin/as
 ## User defined environment variables
 ##
 CodeLiteDir:=/usr/share/codelite
-Objects0=$(IntermediateDirectory)/main.c$(ObjectSuffix) 
+Objects0=$(IntermediateDirectory)/main.c$(ObjectSuffix) $(IntermediateDirectory)/src_Exercise1_Ex1.c$(ObjectSuffix) 
 
 
 
@@ -98,6 +98,14 @@ $(IntermediateDirectory)/main.c$(DependSuffix): main.c
 
 $(IntermediateDirectory)/main.c$(PreprocessSuffix): main.c
 	$(CC) $(CFLAGS) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/main.c$(PreprocessSuffix) main.c
+
+$(IntermediateDirectory)/src_Exercise1_Ex1.c$(ObjectSuffix): src/Exercise1/Ex1.c $(IntermediateDirectory)/src_Exercise1_Ex1.c$(DependSuffix)
+	$(CC) $(SourceSwitch) "/home/lennart/Documents/github/c-stuff/Exercises/src/Exercise1/Ex1.c" $(CFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/src_Exercise1_Ex1.c$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/src_Exercise1_Ex1.c$(DependSuffix): src/Exercise1/Ex1.c
+	@$(CC) $(CFLAGS) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/src_Exercise1_Ex1.c$(ObjectSuffix) -MF$(IntermediateDirectory)/src_Exercise1_Ex1.c$(DependSuffix) -MM src/Exercise1/Ex1.c
+
+$(IntermediateDirectory)/src_Exercise1_Ex1.c$(PreprocessSuffix): src/Exercise1/Ex1.c
+	$(CC) $(CFLAGS) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/src_Exercise1_Ex1.c$(PreprocessSuffix) src/Exercise1/Ex1.c
 
 
 -include $(IntermediateDirectory)/*$(DependSuffix)

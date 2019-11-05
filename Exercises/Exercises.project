@@ -94,5 +94,9 @@
   </Settings>
   <VirtualDirectory Name="src">
     <File Name="main.c"/>
+    <VirtualDirectory Name="Exercise1">
+      <File Name="src/Exercise1/Ex1.c"/>
+      <File Name="src/Exercise1/Ex1.h"/>
+    </VirtualDirectory>
   </VirtualDirectory>
 </CodeLite_Project>

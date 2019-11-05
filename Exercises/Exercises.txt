@@ -1,1 +1,1 @@
-./Debug/main.c.o
+./Debug/main.c.o ./Debug/src_Exercise1_Ex1.c.o
